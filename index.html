@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio of Divyanshi Srivastava, 2D animator and illustrator. Browse animation and illustration projects, tools, and contact details.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🎨%3C/text%3E%3C/svg%3E">
+<title>Divyanshi Srivastava – 2D Animator & Illustrator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--indigo:#221C5B;--indigo2:#35308A;--coral:#FF6A55;--bg:#FBF8F4;--card:#FFFFFF;--ink:#1B1840;--muted:#5C5878;--line:#E6E0EE;--on-indigo:#FFFFFF;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15123A;--card:#1E1A52;--ink:#F4F1FA;--muted:#B8B3D6;--line:#3A3590;--indigo:#0F0C2E}}
+:root[data-theme="dark"]{--bg:#15123A;--card:#1E1A52;--ink:#F4F1FA;--muted:#B8B3D6;--line:#3A3590;--indigo:#0F0C2E}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;font-size:1.0625rem}
+h1,h2,h3{font-family:'Syne','DM Sans',system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+h2{font-size:clamp(1.8rem,4.5vw,2.8rem);margin-bottom:.6rem}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 2rem}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;background:var(--coral);color:#fff;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:2px solid currentColor}
+/* hero */
+.hero{background:var(--indigo);color:var(--on-indigo);position:relative;overflow:hidden;padding-top:clamp(2.5rem,6vw,4.5rem)}
+.hero::after{content:"";position:absolute;right:-8vw;bottom:-12vw;width:36vw;height:36vw;min-width:240px;min-height:240px;border-radius:50%;background:var(--coral);opacity:.9}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.6rem,8vw,5.4rem);font-weight:800;letter-spacing:-.02em}
+.role{font-family:'Syne',sans-serif;font-weight:600;font-size:clamp(1.1rem,2.8vw,1.5rem);color:var(--coral);margin:.9rem 0 1.2rem}
+.hero p{max-width:52ch;opacity:.92;margin:0 0 1.8rem}
+.hero .acts{display:flex;gap:.8rem;flex-wrap:wrap}
+.portrait{justify-self:center;width:min(100%,340px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--bg);background:#bbb}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+/* tools */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
+.group{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.4rem}
+.group h3{font-size:1.15rem;margin-bottom:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.chips li{padding:.35rem .85rem;border-radius:999px;background:var(--indigo);color:#fff;font-size:.95rem;font-weight:500}
+.group.skills .chips li{background:var(--coral);color:#fff}
+.plain{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
+.plain li{padding-left:1rem;border-left:3px solid var(--coral)}
+.plain b{display:block}
+.plain span{color:var(--muted);font-size:.95rem}
+/* projects */
+.work{background:var(--indigo);color:var(--on-indigo)}
+.work .lead{color:#CFCBEA}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:1.5rem}
+.proj{background:var(--bg);color:var(--ink);border-radius:22px;padding:clamp(1.4rem,3vw,2.2rem);display:flex;flex-direction:column;gap:1.1rem}
+.proj h3{font-size:clamp(1.5rem,3.5vw,2rem)}
+.proj>p{margin:0;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:.8rem;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;align-items:start}
+.steps li::before{content:counter(s);width:2.2rem;height:2.2rem;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font-weight:700;font-family:'Syne',sans-serif}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:.97rem}
+.proj .btn{margin-top:auto;align-self:flex-start;background:var(--indigo2);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .proj{background:#1E1A52}}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:2rem;align-items:start}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
+.links a{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1rem 1.2rem;background:var(--card);border:1px solid var(--line);border-radius:14px;text-decoration:none;font-weight:700;transition:border-color .15s}
+.links a:hover{border-color:var(--coral)}
+.links small{font-weight:400;color:var(--muted);font-size:.95rem;overflow-wrap:anywhere}
+.qr{background:#fff;border-radius:22px;padding:1rem;text-align:center;border:1px solid var(--line);max-width:300px;justify-self:center}
+.qr img{width:100%;height:auto;display:block}
+.qr p{margin:.4rem 0 0;color:#5C5878;font-size:.95rem}
+footer{background:var(--indigo);color:#CFCBEA;text-align:center;padding:1.4rem 1rem;font-size:.95rem}
+@media (max-width:760px){.hero .wrap,.contact-grid{grid-template-columns:1fr}.portrait{order:-1;width:min(70%,240px)}.hero{text-align:left}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head>
+<body>
+<header class="hero"><div class="wrap">
+<div>
+<h1>Divyanshi Srivastava</h1>
+<div class="role">2D Animator &amp; Illustrator</div>
+<p>I’m a 2D animator and illustrator who turns ideas into characters that move...... and illustrations that tell a story. I write the scripts and stories, and direct them to come alive as a movie or animation, from the first sketch to the final edit.</p>
+<div class="acts"><a class="btn" href="#projects">See my projects</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+</div>
+<div class="portrait"><img src="assets/portrait.jpg" alt="Illustrated portrait of Divyanshi Srivastava holding a stylus and drawing tablet"></div>
+</div></header>
+
+<section id="tools"><div class="wrap">
+<h2>Tools, skills and experience</h2>
+<p class="lead">The software and craft I use to build every project, and where I’ve learned and volunteered.</p>
+<div class="tools">
+<div class="group"><h3>Software</h3><ul class="chips"><li>Adobe Animate</li><li>Adobe Premiere Pro</li><li>Adobe Photoshop</li><li>Adobe Illustrator</li><li>Maya</li><li>Blender</li><li>Canva</li><li>Procreate</li></ul></div>
+<div class="group skills"><h3>Skills</h3><ul class="chips"><li>Directing</li><li>Story &amp; script writing</li><li>Storyboarding</li><li>Camera handling</li><li>Management</li></ul></div>
+<div class="group"><h3>Volunteer work</h3><ul class="plain"><li>Anubhav Bassi show</li><li>Shilpkari Mela</li><li>Fashion show at Diggi Palace</li><li>Backstage at ARCH College’s design event</li></ul></div>
+<div class="group"><h3>Education</h3><ul class="plain"><li><b>Reliance Animation Academy</b><span>2025–2028</span></li><li><b>Sunbeam Academy</b><span>10th (2021–22) and 12th (2023–24)</span></li></ul></div>
+</div></div></section>
+
+<section id="projects" class="work"><div class="wrap">
+<h2>Projects</h2>
+<p class="lead">My work is organised into two folders. Each one opens in Google Drive.</p>
+<div class="projects">
+<article class="proj"><h3>2D animations</h3>
+<p>Characters designed, brought to life and edited into finished films.</p>
+<ol class="steps">
+<li><div><b>Character sketches</b><span>Illustrator or Procreate</span></div></li>
+<li><div><b>Movement and life</b><span>Animate gives the characters their motion</span></div></li>
+<li><div><b>Editing</b><span>Premiere Pro for the final cut</span></div></li>
+</ol>
+<a class="btn" href="https://drive.google.com/drive/folders/1cjETyVXt5DY5iS-glmNH6FWr4o2WTCQU?usp=sharing" target="_blank" rel="noopener">Open animations folder</a></article>
+<article class="proj"><h3>2D illustrations</h3>
+<p>Each piece starts with a clear visual direction, so the result matches the idea I set out to show.</p>
+<ol class="steps">
+<li><div><b>Mood board</b><span>Pinterest and Cosmos for references and ideation</span></div></li>
+<li><div><b>Production</b><span>Illustrator and Photoshop turn the idea into the final artwork</span></div></li>
+</ol>
+<a class="btn" href="https://drive.google.com/drive/folders/1X0m5D6CkyaTUNRHoCVcC9mCnqJUw04ab?usp=sharing" target="_blank" rel="noopener">Open illustrations folder</a></article>
+</div></div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Contact</h2>
+<p class="lead">Have a project in mind? Reach out through any of these.</p>
+<div class="contact-grid">
+<ul class="links">
+<li><a href="tel:+919555719677">Phone <small>+91 9555719677</small></a></li>
+<li><a href="mailto:workwithmedivyanshi@gmail.com">Email <small>workwithmedivyanshi@gmail.com</small></a></li>
+<li><a href="https://www.instagram.com/div_idesigns/" target="_blank" rel="noopener">Instagram <small>divi media production</small></a></li>
+<li><a href="https://www.linkedin.com/in/divyanshi-srivastava-988907450/" target="_blank" rel="noopener">LinkedIn <small>Divyanshi Srivastava</small></a></li>
+<li><a href="https://www.behance.net/divyanssrivast50" target="_blank" rel="noopener">Behance <small>Divyanshi Srivastava</small></a></li>
+</ul>
+<div class="qr"><img src="assets/instagram-qr.png" alt="QR code linking to the divi media production Instagram page"><p>Scan to open Instagram</p></div>
+</div></div></section>
+<footer>© Divyanshi Srivastava · 2D Animator &amp; Illustrator</footer>
+</body></html>
